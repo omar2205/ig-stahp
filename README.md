@@ -15,6 +15,6 @@ Still testing this. Will update.
 
 ## Features
 
-[x] Stops vidoes from autoplaying
-[ ] Play video when user click play
+- [x] Stops vidoes from autoplaying
+- [ ] Play video when user click play
 
