@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "IG-STAHP",
+  "version": "0.0.1",
+  "action": { "default_popup": "index.html" },
+  "content_scripts": [
+    {
+      "js": ["src/ig.ts"],
+      "matches": ["https://*.instagram.com/*"]
+    }
+  ]
+}
