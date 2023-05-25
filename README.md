@@ -10,7 +10,11 @@ Every time you scroll (there is a delay) it parses the whole site and remove eve
 
 ## How to install/use?
 
-Still testing this. Will update.
+For now:
+1. Download the latest release
+2. Unzip the file
+3. Go to `chrome://extensions/` (Check/enable `Developer mode`)
+4. Drag and drop `ig-stahp` folder into the page
 
 
 ## Features
