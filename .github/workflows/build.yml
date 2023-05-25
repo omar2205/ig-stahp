@@ -1,0 +1,32 @@
+name: Build the Extention
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '18'
+      - run: npm i --legacy-peer-deps
+      - run: npm run build
+      - run: mv dist ig-stahp
+      - run: zip -r ig-stahp.zip ig-stahp
+
+      - name: get-npm-version
+        id: package-version
+        uses: martinbeentjes/npm-get-version-action@v1.3.1
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            ig-stahp.zip
